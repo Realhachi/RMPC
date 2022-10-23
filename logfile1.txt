@@ -1,0 +1,34 @@
+* Starting YALMIP global branch & bound.
+* Upper solver     : fmincon
+* Lower solver     : LMILAB
+* LP solver        : LINPROG
+* -Extracting bounds from model
+* -Perfoming root-node bound propagation
+* -Calling upper solver (no solution found)
+* -Branch-variables : 25
+* -More root-node bound-propagation
+* -Performing LP-based bound-propagation 
+#############################################################
+You are using LMILAB. Please don't use LMILAB with YALMIP
+https://yalmip.github.io/solver/lmilab/
+ 
+Install a better SDP solver
+https://yalmip.github.io/allsolvers/
+ 
+To get rid of this message, edit calllmilab.m  
+(but don't expect support when things do not work,
+YALMIP + LMILAB => No support)
+#############################################################
+* -And some more root-node bound-propagation
+* Timing: 56% spent in upper solver (1 problems solved)
+*         28% spent in lower solver (1 problems solved)
+*         0% spent in LP-based domain reduction (0 problems solved)
+*         0% spent in upper heuristics (0 candidates tried)
+警告: 矩阵为奇异值、接近奇异值或缩放错误。结果可能不准确。RCOND = NaN。 
+> 位置：IMS5 (第 168 行)
+ 
+错误使用  *  (第 48 行)
+Multiplying NaN with an SDPVAR makes no sense.
+
+出错 IMS5 (第 169 行)
+    delta_u{k} = K_hat*x_hat{k};
